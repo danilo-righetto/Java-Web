@@ -1,0 +1,7 @@
+package br.com.java.web.test;
+
+public class TestaConexao {
+	public static void main(String[] args) {
+		
+	}
+}

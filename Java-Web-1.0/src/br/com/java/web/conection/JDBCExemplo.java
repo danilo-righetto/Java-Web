@@ -13,7 +13,7 @@ public class JDBCExemplo {
 	public static void main(String[] args) {
 		Connection conexao2 = null;
 		try {
-			conexao2 = DriverManager.getConnection("jdbc:mysql://localhost/pessoas", "root", "root");
+			conexao2 = DriverManager.getConnection("jdbc:mysql://localhost/fj21", "root", "root");
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}

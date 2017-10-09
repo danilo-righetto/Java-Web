@@ -1,0 +1,13 @@
+package br.com.java.web.test;
+
+import java.sql.Connection;
+
+import br.com.java.web.conection.ConnectionFactoryCaelum;
+
+public class TestaConexao {
+	public static void main(String[] args) {
+		Connection con = new ConnectionFactoryCaelum().getConnection();
+		System.out.println("Conexao Aberta!");
+		con.close();
+	}
+}
