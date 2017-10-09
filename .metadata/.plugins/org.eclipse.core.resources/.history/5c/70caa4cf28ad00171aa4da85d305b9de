@@ -1,0 +1,25 @@
+package br.com.java.web.conection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class JDBCExemplo {
+	public static void main(String[] args) {
+		Connection conexao = (Connection) new ConnectionFactory();
+		//conexao = 
+		try {
+			DriverManager.getConnection("jdbc:mysql://localhost/fj21");
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		System.out.println("Conectado!");
+		try {
+			conexao.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

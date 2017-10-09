@@ -1,0 +1,10 @@
+package br.com.java.web.test;
+
+public class JDBCExemplo {
+	public static void main(String[] args) {
+		Connection conexao = DriverManager.getConnection(
+		"jdbc:mysql://localhost/fj21");
+		System.out.println("Conectado!");
+		conexao.close();
+	}
+}

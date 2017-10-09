@@ -1,0 +1,12 @@
+package br.com.java.web.conection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class JDBCExemplo {
+	public static void main(String[] args) {
+		Connection con = new ConnectionFactory(); //conexao = DriverManager.getConnection("jdbc:mysql://localhost/fj21");
+		System.out.println("Conectado!");
+		conexao.close();
+	}
+}
