@@ -1,0 +1,5 @@
+package br.com.java.web.bean;
+
+public class Contato {
+
+}

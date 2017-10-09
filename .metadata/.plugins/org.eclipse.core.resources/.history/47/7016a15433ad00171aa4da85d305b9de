@@ -1,0 +1,10 @@
+package br.com.java.web.conection;
+
+import java.sql.SQLException;
+
+public class JDBCInsere {
+	public static void main(String[] args) throws SQLException{
+		Connection con = new ConnectionFactory().getConnection();
+		
+	}
+}

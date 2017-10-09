@@ -21,6 +21,10 @@ Primeiramente acesso [Site do Java](http://www.oracle.com/technetwork/pt/java/ja
 
 Para o desenvolvimento do projeto referente ao [livro](https://www.caelum.com.br/apostila-java-web/) informado nesse documento, estou utilizando a IDE [Eclipse Mars 4.5.0](https://www.eclipse.org/mars/).
 
+### Javabens
+
+Javabeans são classes que possuem o construtor sem argumentos e com métodos de acesso do tipo get e set!
+
 ### Versões do Java
 
 Essas são as versões do Java existentes:

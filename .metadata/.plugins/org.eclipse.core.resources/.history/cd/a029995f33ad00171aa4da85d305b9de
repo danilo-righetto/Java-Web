@@ -1,0 +1,14 @@
+package br.com.java.web.conection;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class JDBCInsere {
+	public static void main(String[] args) throws SQLException{
+		Connection con = new ConnectionFactoryCaelum().getConnection();
+		// cria um preparedStatement
+		String sql = "insert into contatos" +
+		" (nome,email,endereco,dataNascimento)" +
+		" values (?,?,?,?)";
+	}
+}

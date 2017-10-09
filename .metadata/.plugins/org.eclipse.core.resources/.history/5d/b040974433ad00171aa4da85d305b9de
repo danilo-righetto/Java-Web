@@ -1,0 +1,7 @@
+package br.com.java.web.conection;
+
+public class JDBCInsere {
+	public static void main(String[] args) {
+		
+	}
+}

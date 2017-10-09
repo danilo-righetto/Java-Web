@@ -1,0 +1,9 @@
+package br.com.java.web.bean;
+
+public class Contato {
+	private Long id;
+	private String nome;
+	private String email;
+	private String endereco;
+	private Calendar dataNascimento;
+}
