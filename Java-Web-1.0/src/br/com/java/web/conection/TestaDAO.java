@@ -1,6 +1,7 @@
 package br.com.java.web.conection;
 
 import java.util.Calendar;
+import java.util.List;
 
 import br.com.java.web.DAO.ContatoDAO;
 import br.com.java.web.bean.Contato;
@@ -27,6 +28,18 @@ public class TestaDAO {
 		
 		System.out.println("Consultando os registro do Banco de dados ...");
 		
+		dao.consulta("contatos");
 		
+		System.out.println("Consultando os registro do Banco de dados via getLista() ...");
+		
+		ContatoDAO dao2 = new ContatoDAO();
+		List<Contato> contatos = dao.getLista();
+		
+		for (Contato contato2 : contatos) {
+			System.out.println("Nome: " + contato.getNome());
+			System.out.println("Email: " + contato.getEmail());
+			System.out.println("Endereço: " + contato.getEndereco());
+			System.out.println("Data de Nascimento: " + contato.getDataNascimento().getTime() + "\n");
+		}
 	}
 }

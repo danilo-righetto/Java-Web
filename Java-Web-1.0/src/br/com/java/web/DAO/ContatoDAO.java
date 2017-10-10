@@ -5,6 +5,9 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 import br.com.java.web.bean.Contato;
 import br.com.java.web.conection.ConnectionFactoryCaelum;
@@ -56,7 +59,7 @@ public class ContatoDAO {
 				String nome = rs.getString("nome");
 				String email = rs.getString("email");
 				
-				System.out.println("O nome é: "+nome+" \n E o email é: "+email);
+				System.out.println("O nome é: "+nome+" \nE o email é: "+email);
 			}
 			
 			rs.close();
@@ -66,7 +69,39 @@ public class ContatoDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+	}
+	
+	//Usando o getLista()
+	public List<Contato> getLista(){
+		List<Contato> contatos = new ArrayList<Contato>();
+		try {
+			PreparedStatement stmt = this.connection.prepareStatement("select * from contatos");
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()){
+				//Criando o Objeto Contato
+				Contato contato = new Contato();
+				
+				//Setando os valores
+				contato.setId(rs.getLong("id"));
+				contato.setNome(rs.getString("nome"));
+				contato.setEmail(rs.getString("email"));
+				contato.setEndereco(rs.getString("endereco"));
+				
+				//Montando a data atraves do Calendar
+				Calendar data = Calendar.getInstance();
+				data.setTime(rs.getDate("dataNascimento"));
+				contato.setDataNascimento(data);
+				
+				//Adicionando Objetos na Lista
+				contatos.add(contato);
+				
+			}
+			rs.close();
+			stmt.close();
+			return contatos;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 	}
 }
