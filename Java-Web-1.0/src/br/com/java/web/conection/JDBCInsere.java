@@ -3,12 +3,14 @@ package br.com.java.web.conection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.Duration;
 import java.util.Calendar;
 
 public class JDBCInsere {
 	public static void main(String[] args) throws SQLException{
 		//Conectando
 		Connection con = null;
+		//Veja mais sobre try-with-resources
 		try {
 			con = new ConnectionFactoryCaelum().getConnection();
 			
