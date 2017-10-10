@@ -33,13 +33,13 @@ public class TestaDAO {
 		System.out.println("Consultando os registro do Banco de dados via getLista() ...");
 		
 		ContatoDAO dao2 = new ContatoDAO();
-		List<Contato> contatos = dao.getLista();
+		List<Contato> contatos = dao2.getLista();
 		
 		for (Contato contato2 : contatos) {
-			System.out.println("Nome: " + contato.getNome());
-			System.out.println("Email: " + contato.getEmail());
-			System.out.println("Endereço: " + contato.getEndereco());
-			System.out.println("Data de Nascimento: " + contato.getDataNascimento().getTime() + "\n");
+			System.out.println("Nome: " + contato2.getNome());
+			System.out.println("Email: " + contato2.getEmail());
+			System.out.println("Endereço: " + contato2.getEndereco());
+			System.out.println("Data de Nascimento: " + contato2.getDataNascimento().getTime() + "\n");
 		}
 	}
 }
